@@ -1,0 +1,19 @@
+version: 0.2  
+phases:
+  commands:
+    - echo Entered the install phase...
+    - echo Installing dependencies...
+
+  pre_build:
+      commands:
+        - echo Enterd the pre_build phase...
+  build:
+      commands:
+        - echo Entered the build phase...
+        - echo Build stated
+        - grep -Fq "Arpit" index.html
+  finally:
+  commands:
+    - echo Entered the post_build phase...
+    - echo Build completed            
+      
